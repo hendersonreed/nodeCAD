@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "build": "esbuild src/app.jsx src/index.html --loader:.html=copy --sourcemap --bundle --outdir=build",
+    "dev": "esbuild src/app.jsx src/index.html --loader:.html=copy --bundle --outdir=build --watch --servedir=build",
+    "start": "node build/app.js",
+    "clean": "rm -rf build/"
+  },
+  "dependencies": {
+    "@jscad/core": "^2.6.7",
+    "@jscad/modeling": "^2.12.0",
+    "@jscad/regl-renderer": "^2.6.7",
+    "esbuild": "^0.19.4",
+    "gl": "^6.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactflow": "^11.9.2"
+  }
+}
